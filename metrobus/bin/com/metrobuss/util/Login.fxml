@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="535.0" prefWidth="300.0" style="-fx-background-color: #54F593;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.metrobuss.util.LoginController">
+   <children>
+      <Label layoutX="14.0" layoutY="49.0" text="Metrobüs Bilgi İşlem - Kullanıcı Formu">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="78.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../imgs/bus.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="41.0" layoutY="272.0" prefHeight="76.0" prefWidth="223.0" spacing="17.0">
+         <children>
+            <TextField fx:id="username" alignment="CENTER" promptText="Kullanıcı Adı">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="pass" alignment="CENTER" promptText="Şifre">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <Button fx:id="btnLogin" layoutX="45.0" layoutY="379.0" mnemonicParsing="false" onAction="#btnLogin_action" text="Giriş Yap">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnKayit" layoutX="150.0" layoutY="379.0" mnemonicParsing="false" onAction="#btnKayit_action" text="Kullanıcı Kaydı">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReset" layoutX="41.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnReset_action" prefHeight="25.0" prefWidth="223.0" text="Şifremi Unuttum">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="label_info" layoutX="41.0" layoutY="492.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

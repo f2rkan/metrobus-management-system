@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="1200.0" style="-fx-background-color: #54F5E6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.metrobuss.util.SampleController">
+   <children>
+      <VBox layoutX="14.0" layoutY="132.0" prefHeight="348.0" prefWidth="170.0" spacing="18.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="286.0" text="ID" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="286.0" text="PLAKA" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="323.0" text="ÇALIŞTIĞI HAT" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="297.0" text="ARAÇ MARKASI" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="293.0" text="ARAÇ MODELİ" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="288.0" text="İLK DURAK" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="294.0" text="SON DURAK" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="299.0" text="YOLCU KAPASİTESİ" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="330.0" text="SİSTEME GİRİŞ TARİHİ" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="199.0" layoutY="132.0" prefHeight="348.0" prefWidth="176.0" spacing="14.0">
+         <children>
+            <TextField fx:id="tfId" />
+            <TextField fx:id="tfPlaka" />
+            <TextField fx:id="tfCalistigiHat" />
+            <TextField fx:id="tfMarka" />
+            <TextField fx:id="tfModel" />
+            <TextField fx:id="tfFirstDurak" />
+            <TextField fx:id="tfLastDurak" />
+            <TextField fx:id="tfKapasite" />
+            <DatePicker fx:id="dtGiris" />
+         </children>
+      </VBox>
+      <Label layoutX="506.0" layoutY="32.0" text="Metrobüs Bilgi İşlem Ekranı">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="85.0" fitWidth="170.0" layoutX="274.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../imgs/m0.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEkle" alignment="CENTER_RIGHT" layoutX="450.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnEkle_action" prefHeight="63.0" prefWidth="109.0" text="EKLE" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tvEkran" layoutX="450.0" layoutY="132.0" onMousePressed="#tvEkran_clicked" prefHeight="265.0" prefWidth="745.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="47.0" text="ID" />
+          <TableColumn fx:id="col_plaka" prefWidth="77.0" text="PLAKA" />
+            <TableColumn fx:id="col_hat" prefWidth="56.0" text="HAT" />
+            <TableColumn fx:id="col_marka" prefWidth="87.0" text="MARKA" />
+            <TableColumn fx:id="col_model" prefWidth="54.0" text="MODEL" />
+            <TableColumn fx:id="col_ilkDurak" prefWidth="102.0" text="İLK DURAK" />
+            <TableColumn fx:id="col_sonDurak" prefWidth="87.0" text="SON DURAK" />
+            <TableColumn fx:id="col_kapasite" prefWidth="120.0" text="YOLCU KAPASİTESİ" />
+            <TableColumn fx:id="col_tarih" prefWidth="113.0" text="KAYIT TARİHİ" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="450.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../imgs/add.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSil" alignment="CENTER_RIGHT" layoutX="581.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnSil_action" prefHeight="63.0" prefWidth="109.0" text="SİL" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="581.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../imgs/delete.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnGuncelle" alignment="CENTER_RIGHT" layoutX="717.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnGuncelle_action" prefHeight="63.0" prefWidth="150.0" text="GÜNCELLE" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="717.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../imgs/update.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnTemizle" alignment="CENTER_RIGHT" layoutX="905.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnTemizle_action" prefHeight="63.0" prefWidth="131.0" text="TEMİZLE" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="905.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../imgs/clear.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
